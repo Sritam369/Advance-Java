@@ -29,8 +29,13 @@ public class JdbcPro2 {
 //		 }
 	   }
 	   }
-	   catch(Exception e) {
-		   e.printStackTrace();
+	   catch(ClassNotFoundException | SQLException e) {
+		  if(e instanceof ClassNotFoundException) {
+			  IO.println("can't find the class to load. check your driver");
+		  }
+		  else {
+			  IO.println("something is wrong with your connection to database. check your url/user name/password");
+		  }
 	   }
    }
    void main() {
