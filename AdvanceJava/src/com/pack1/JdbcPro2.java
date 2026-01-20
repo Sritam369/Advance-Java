@@ -126,6 +126,7 @@ public class JdbcPro2 {
 			   getEmployeeDetails();
 		   }
 		   else {
+			   IO.println("System exited successfully");
 			   System.exit(0);
 		   }
 	   }
