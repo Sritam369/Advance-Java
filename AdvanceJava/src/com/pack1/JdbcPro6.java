@@ -24,8 +24,8 @@ public class JdbcPro6 {
 	}
 	
 	public void m1() {
-		try {
-			Connection con=connect();
+		Connection con=connect();
+		try (con){
 			Statement stm = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
 			ResultSet rs = stm.executeQuery("select * from employee");
 			
@@ -75,7 +75,31 @@ public class JdbcPro6 {
 			e.printStackTrace();
 		}
 	}
+	
+	public void m2() {
+		Connection con=connect();
+		try(con) {
+			Statement stm = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
+			ResultSet rs=stm.executeQuery("select eid,efname,esal from employee");
+			while(rs.next()) {
+				String e_id=rs.getString(1);
+				if(e_id.equals("102")) {
+					rs.updateInt(3, 15000);
+					rs.updateRow();
+				}
+			}
+			IO.println("Data updated");
+			rs.absolute(3);
+			IO.println(rs.getString(1)+" "+rs.getString(2)+" "+rs.getInt(3));
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
  void main() {
-	 new JdbcPro6().m1();
+	 JdbcPro6 obj=new JdbcPro6();
+	 //obj.m1();
+	 obj.m2();
  }
 }
