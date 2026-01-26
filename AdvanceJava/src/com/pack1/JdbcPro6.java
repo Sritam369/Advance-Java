@@ -30,11 +30,11 @@ public class JdbcPro6 {
 			ResultSet rs = stm.executeQuery("select * from employee");
 			
 			while(rs.next()) {
-				IO.println(rs.getString(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+rs.getInt(4)+" "+rs.getString(1));
+				IO.println(rs.getString(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+rs.getInt(4)+" "+rs.getString(5));
 			}
 			IO.println();
 			while(rs.previous()) {
-				IO.println(rs.getString(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+rs.getInt(4)+" "+rs.getString(1));
+				IO.println(rs.getString(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+rs.getInt(4)+" "+rs.getString(5));
 			}
 			IO.println();
 			if(rs.last()) {
