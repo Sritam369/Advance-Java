@@ -30,12 +30,6 @@ public class JdbcPro8 {
 			Connection con = DriverManager.getConnection(url,uName,pwd);
 			CallableStatement cst = con.prepareCall("{call InsertData(?,?,?,?,?)}");
 			
-	/* Procedure : SQL>  CREATE OR REPLACE PROCEDURE RetrieveData(EID VARCHAR2 , ENAME OUT VARCHAR2, EDESG OUT VARCHAR2, EBSAL OUT NUMBER, ETSAL OUT NUMBER) IS BEGIN
-  2  SELECT EMPNAME,EMPDESG INTO ENAME,EDESG FROM EMPDATA WHERE EMPID=EID;
-  3  SELECT EMPBSAL,EMPTSAL INTO EBSAL,ETSAL FROM EMPSAL WHERE EMPID=EID;
-  4  END;
-  5  /
-  */
 			String id = IO.readln("Enter your id");
 			String name = IO.readln("Enter your name");
 			String desg = IO.readln("Enter your designation");
@@ -64,6 +58,14 @@ public class JdbcPro8 {
 		Connection con = connect();
 		try(con) {
 		CallableStatement cst = con.prepareCall("{call RetrieveData(?,?,?,?,?)}");
+		
+		/* Procedure : SQL>  CREATE OR REPLACE PROCEDURE RetrieveData(EID VARCHAR2 , ENAME OUT VARCHAR2, EDESG OUT VARCHAR2, EBSAL OUT NUMBER, ETSAL OUT NUMBER) IS BEGIN
+		  2  SELECT EMPNAME,EMPDESG INTO ENAME,EDESG FROM EMPDATA WHERE EMPID=EID;
+		  3  SELECT EMPBSAL,EMPTSAL INTO EBSAL,ETSAL FROM EMPSAL WHERE EMPID=EID;
+		  4  END;
+		  5  /
+		  */
+		
 		  String eid = IO.readln("Enter employee id");
 		  cst.setString(1, eid);
 		  
