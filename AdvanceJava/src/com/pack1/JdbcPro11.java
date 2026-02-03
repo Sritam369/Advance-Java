@@ -78,6 +78,7 @@ public class JdbcPro11 {
 			IO.println("isAutoIncrement() : "+rsm.isAutoIncrement(1));
 			IO.println("getColumnType() : "+rsm.getColumnType(1));
 			
+			
 		}
 		catch(Exception e) {
 			e.printStackTrace();
