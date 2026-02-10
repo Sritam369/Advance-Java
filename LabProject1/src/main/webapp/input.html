@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+ #d1{
+  Background-color: pink;
+  border: 1px solid black;
+  border-radius : 10px;
+  height: 800px;
+  width: 500px;
+ }
+ #d2{
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  height:25px;
+  margin-top:7px;
+  margin-bottom:7px;
+ }
+
+</style>
+</head>
+<body>
+<h1>
+<center>
+ Person Details<br><br>
+ <div id="d1">
+ <form action="fs" method="post">
+ <div id="d2">
+ Name : <input type="text" name="name1">
+ </div>
+ <div id="d2">
+ Age : <input type="number" name="num">
+ </div>
+ <div id="d2">
+ Mobile : <input type="number" name="mob">
+  </div>
+ Select Your Gender <br><br>
+ <input type="radio" name="gender" value="male">Male <input type="radio" name="gender" value="female">Female <br><br>
+ Select Your Hobbies <br><br>
+ <input type = "checkbox" name="hobby" value="read">Reading  
+ <input type = "checkbox" name="hobby" value="search">Searching<br><br>
+ <input type = "checkbox" name="hobby" value="sleep">Sleeping
+ <input type = "checkbox" name="hobby" value="dance">	Dancing <br><br>
+ 
+ <label for="i">Select State</label>
+ <select id="i" name="state">
+ <option value="telengana">Telengana</option><br><br>
+ <option value="andhra">AndhraPradesh</option><br><br>
+ <option value="tamilnadu">Tamilnadu</option><br><br>
+ <option value="maharastra">Maharashtra</option><br><br>
+ </select><br><br>
+ <input type="submit" value="click" name="click"><br><br>
+ </form> 
+ </div>    
+</center>
+</h1>
+</body>
+</html>
