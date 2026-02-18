@@ -23,7 +23,7 @@ public class JdbcPro2 {
 	   Connection con=null;
 	   try {
 		   Class.forName(driver);
-		    con = DriverManager.getConnection(dbUrl, dbUname, dbPwd);
+		   con = DriverManager.getConnection(dbUrl, dbUname, dbPwd);
 	   }
 	   catch(Exception e) {
 		   e.printStackTrace();
