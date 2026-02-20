@@ -32,13 +32,13 @@ public class AdminLoginServlet extends HttpServlet{
 		}
 		if(flag) {
 			
-			req.setAttribute("msg", name);	
+			req.setAttribute("login", name);	
 			Cookie ck = new Cookie("ck1",name);
 			res.addCookie(ck);
 			req.getRequestDispatcher("View.jsp").forward(req, res);			
 		}
 		else {
-			req.setAttribute("msg", name);
+			req.setAttribute("login", name);
 			req.getRequestDispatcher("View2.jsp").forward(req, res);
 		}
 		

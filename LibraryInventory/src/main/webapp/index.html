@@ -14,7 +14,7 @@ align-content:center;
 #d1{
 display:flex;
 flex-direction:column;
-height:300px;
+height:400px;
 width:300px;
 justify-content:center;
 align-content:center;
@@ -33,15 +33,17 @@ display:flex;
 flex-direction:column;
 padding:20px;
 }
-#d3{
+span{
 display:flex;
-padding:20px;
+padding-left:20px;
+
 gap:30px;
 }
 button{
 background-color:blue;
 color:white;
 }
+
 </style>
 </head>
 <body>
@@ -54,12 +56,16 @@ color:white;
     <input type="text" name="name">
     <P>Password:</P>
     <input type="password" name="pass">    
-   </div>
-   <div id="d3">
-    <button>Login</button>
-    <a href="register.html"><button>Register</button></a>
-   </div>
+   </div>   <span>
+    <button id="b1">Login</button>    
+    </span><br>
    </form>
-  </div>
+   
+   <span>
+   <a href="register.html"><button>Register</button></a>
+   <a href="input.html"><button>Back</button></a>
+   </span>
+   </div>
+ 
 </body>
 </html>

@@ -13,11 +13,25 @@ background-color:orange;
 h1{
 color:orange;
 }
+#cookie{
+color:black;
+}
 
 </style>
 </head>
 <body>
-<center>
+<center><h1 id="cookie">
+<%
+Cookie[] arr = request.getCookies();
+for(Cookie r:arr){
+	   if("ck1".equals(r.getName())){
+		   out.println("Page Belongs To: "+r.getValue()+" <br><br>");
+	   }
+	   else{
+		   
+	   }
+}
+%></h1>
 <fieldset>
     <h1>Update product Details</h1><br><br>
    <form action="update" method="post"><br><br>
@@ -26,6 +40,7 @@ color:orange;
    Enter New Product Quantity: <input type="text" name="qty"><br><br>
    <button>Submit</button>
    </form>
+   
 </fieldset>
 </body>
 </html>

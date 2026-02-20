@@ -48,7 +48,7 @@ gap:20px;
 
   <h1>
   <%
-      String data = (String) request.getAttribute("msg");
+      String data = (String) request.getAttribute("login");
       out.println("Welcome user: "+data);
       
 		
@@ -56,7 +56,8 @@ gap:20px;
   </h1>
   <div id="d2">
     <a href="add.jsp"><button>Add Product</button></a>  
-    <a href=viewproduct><button>View All Products </button></a>  <br><br>
+    <a href=viewproduct><button>View All Products </button></a>  
+    <a href=logout><button>Logout</button></a><br><br>
    </div>  
   </div>
   <br><br>

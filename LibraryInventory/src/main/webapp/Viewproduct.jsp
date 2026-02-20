@@ -25,8 +25,15 @@ width:400px;
 flex-direction: column;
 
 }
-
-
+#d2{
+display:flex;
+margin-top:20px;
+margin-left:0px;
+gap:20px;
+}
+a {
+  text-decoration: none;
+}
 #t1{
 background-color: black;
 color:white;
@@ -89,6 +96,11 @@ else{
 
 </tbody>
 </table>
+<div id="d2">
+   <a href="add.jsp">Add Product</a>
+   <a href=logout>Logout</a>
+   </div>
 </div>
+
 </body>
 </html>
