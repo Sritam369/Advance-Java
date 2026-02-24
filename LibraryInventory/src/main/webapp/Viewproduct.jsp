@@ -77,17 +77,12 @@ else{
  while(itr.hasNext()){
 	 ProductBean pb = itr.next();%>
 	 <tr>
-	 <td><% out.println(pb.getCode());
-	        Cookie c = new Cookie("ck2",pb.getCode());
-	        response.addCookie(c);
-	      
-	        
-	 %></td>
+	 <td><% out.println(pb.getCode());%></td>  	
 	 <td><% out.println(pb.getName());%></td>
 	 <td><% out.println(pb.getPrice());%></td>
 	 <td><% out.println(pb.getStock());%></td>
-	 <td><a href="Update.jsp">Edit</a></td>
-	 <td><a href="Delete.jsp">Delete</a></td>
+	 <td><a href='Update?pcode="<%= pb.getCode()%>"'>Edit</a></td> 
+	 <td><a href='Update?pcode="<%=pb.getCode()%>"'>Delete</a></td> 
 	 </tr>
 <%	 
  }

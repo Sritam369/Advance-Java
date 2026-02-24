@@ -1,3 +1,4 @@
+<%@page import="com.pack1.ProductBean" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -63,10 +64,20 @@ gap:20px;
           
       <div id="d1">
         <h1>
-        <%          
+        <%      
+        ProductBean pbean = (ProductBean)request.getAttribute("p_bean");
+        
            String data = (String) request.getAttribute("msg");
            out.println(data);
-        %>        
+        %>  
+        
+        <form action="update" method="post">
+       Product Price: <input type="text" name="price" value="<%= pbean.getPrice() %>"> <br><br>
+       Product Quantity: <input type="text" name="qty" value="<%= pbean.getStock() %>"> <br><br>
+       <input type="hidden" name=pcode value="<%= pbean.getCode() %>">
+       <button>Update</button>
+      </form>
+            
         </h1>
      <div id="d2">
     <a href="add.jsp"><button>Add Product</button></a>  

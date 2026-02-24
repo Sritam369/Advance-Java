@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style >
+body{
+display:flex;
+justify-content: center;
+align-content: center;
+height: 100%;
+width: 100%;
+}
+#d1{
+display:flex;
+flex-direction:column;
+justify-content: center;
+align-content: center;
+height: 300px;
+width: 400px;
+background-color: black;
+color:white;
+}
+#s1{
+padding:44px;
+}
+#d2{
+padding:20px;
+}
+h1{
+text-align:center;
+}
+button{
+background-color: blue;
+color: white;
+margin-left:20px;
+}
+</style>
+</head>
+<body>
+<div id="d1">
+<h1>Customer Login</h1>
+<form action="clog" method="post">
+<div id="d2">
+<span>Customer Name: <input type="text" name="name"></span><br><br>
+
+<span id="s1">Password: <input type="text" name="pass"></span>
+
+</div>
+<button>Login</button>
+</form><br>
+<a href="customerreg.html"><button>New Customer</button></a>
+</div>
+</body>
+</html>
