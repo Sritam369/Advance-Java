@@ -20,7 +20,7 @@ align-content:center;
 margin-left:500px;
 display:flex;
 flex-direction:column;
-height:150px;
+height:300px;
 width:500px;
 justify-content:center;
 align-content:center;
@@ -42,9 +42,11 @@ display:flex;
 justify-content:center;
 align-content:center;
 gap:20px;
+margin-right:32px;
 }
 #cookie{
-
+text-align:center;
+margin-right:40px;
 }
 </style>
 </head>
@@ -65,16 +67,13 @@ gap:20px;
       <div id="d1">
         <h1>
         <%      
-        ProductBean pbean = (ProductBean)request.getAttribute("p_bean");
-        
-           String data = (String) request.getAttribute("msg");
-           out.println(data);
+           ProductBean pbean = (ProductBean)request.getAttribute("p_bean");        
         %>  
         
-        <form action="update" method="post">
+        <form action="upd" method="post">
        Product Price: <input type="text" name="price" value="<%= pbean.getPrice() %>"> <br><br>
        Product Quantity: <input type="text" name="qty" value="<%= pbean.getStock() %>"> <br><br>
-       <input type="hidden" name=pcode value="<%= pbean.getCode() %>">
+       <input type="hidden" name="pcode" value="<%= pbean.getCode() %>">
        <button>Update</button>
       </form>
             

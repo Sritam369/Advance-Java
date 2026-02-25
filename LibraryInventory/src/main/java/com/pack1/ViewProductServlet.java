@@ -18,8 +18,7 @@ protected void doGet(HttpServletRequest req , HttpServletResponse res) throws Se
 		ViewProductDao vd = new ViewProductDao();
 		ArrayList<ProductBean> view = vd.viewBook(book);
 		HttpSession session = req.getSession();
-		session.setAttribute("pbean", session);
-		req.setAttribute("msg", view);
+		session.setAttribute("msg", view);
 		req.getRequestDispatcher("Viewproduct.jsp").forward(req, res);
 	}
 	

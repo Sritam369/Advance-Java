@@ -17,7 +17,7 @@ protected void doGet(HttpServletRequest req , HttpServletResponse res) throws Se
 		
 	   String pcode=req.getParameter("pcode");
 	   HttpSession session = req.getSession(false);
-	   ArrayList<ProductBean>list= (ArrayList<ProductBean>)session.getAttribute("pbean");
+	   ArrayList<ProductBean>list= (ArrayList<ProductBean>)session.getAttribute("msg");
 	   Iterator<ProductBean> itr = list.iterator();
 		ProductBean pb=null;
 		while(itr.hasNext()) {

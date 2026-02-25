@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Updation</title>
 <style>
 body{
 display:flex;
@@ -16,7 +16,7 @@ align-content:center;
 #d1{
 display:flex;
 flex-direction:column;
-height:300px;
+height:200px;
 width:500px;
 justify-content:center;
 align-content:center;
@@ -42,24 +42,28 @@ gap:20px;
 </style>
 </head>
 <body>
-<div id="d1">
-        <h1>
-        <%
-           Cookie[] arr = request.getCookies();
-        for(Cookie a:arr){
-        	if("ck1".equals(a.getName())){
-        		out.println("Hello "+a.getValue()+"<br><br>");
-        	}
-        }
-           String data = (String) request.getAttribute("pbean");
-           out.println(data);
-        %>        
-        </h1>
-     <div id="d2">
+    <div id="d1">
+<h1>
+       <%
+         Cookie[] arr = request.getCookies();
+          for(Cookie a:arr){
+        	  if("ck1".equals(a.getName())){
+        		  out.println("Hello "+a.getValue()+"!!!<br><br>");
+        	  }
+          }
+          
+          String data = (String)request.getAttribute("message");
+          out.println(data);
+       
+       %>
+    
+    
+  </h1>
+    <div id="d2">
     <a href="add.jsp"><button>Add Product</button></a>  
-    <a href=viewproduct><button>View All Products </button></a> 
-    <a href=logout><button>Logout</button></a>
-   </div> 
-   </div> 
+    <a href=viewproduct><button>View All Products </button></a>  
+    <a href=logout><button>Logout</button></a><br><br>
+   </div>
+   </div>  
 </body>
 </html>

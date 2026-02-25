@@ -55,7 +55,8 @@ if(arr!=null){
 else{
 	out.println("No cookie");
 }
-   ArrayList<ProductBean> list = (ArrayList<ProductBean>) request.getAttribute("msg");
+   ArrayList<ProductBean> list = (ArrayList<ProductBean>) session.getAttribute("msg");
+   
 %>
 </h1>
 <table>
@@ -70,23 +71,21 @@ else{
 </thead>
 <tbody>
 
-
 <%
-
- Iterator<ProductBean> itr = list.iterator();
- while(itr.hasNext()){
-	 ProductBean pb = itr.next();%>
+	 Iterator itr=list.iterator();
+	 while(itr.hasNext()){
+  	   ProductBean pb = (ProductBean)itr.next(); %>
 	 <tr>
+	 
 	 <td><% out.println(pb.getCode());%></td>  	
 	 <td><% out.println(pb.getName());%></td>
 	 <td><% out.println(pb.getPrice());%></td>
 	 <td><% out.println(pb.getStock());%></td>
-	 <td><a href='Update?pcode="<%= pb.getCode()%>"'>Edit</a></td> 
-	 <td><a href='Update?pcode="<%=pb.getCode()%>"'>Delete</a></td> 
+	 <td><a href="Update?pcode=<%= pb.getCode() %>">Edit</a></td>
+	 <td><a href="Delete?pcode=<%=pb.getCode()%>">Delete</a></td> 
+	 
 	 </tr>
-<%	 
- }
-%>
+<%} %>
 
 
 </tbody>
