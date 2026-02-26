@@ -3,10 +3,30 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+body{
+display:flex;
+height:100%;
+width:100%;
+justify-content:center;
+align-content:center;
+}
+#d1{
+display:flex;
+flex-direction:column;
+height:500px;
+width:500px;
+background-color: pink;
+color:black;
+justify-content:center;
+align-content:center;
+}
+</style>
 </head>
 <body>
 <center>
 <h1>
+<div id="d1">
 <u>Welcome to Admin Login</u><br><br>
 <form action="login" method="post">
 UserName: <input type="text" name="name"><br><br>
@@ -14,7 +34,7 @@ Password: <input type="text" name="pwd"><br><br>
 <button name="submit" value="login">Login</button>
 
 </form>
-
+</div>
 </h1>
 </body>
 </html>

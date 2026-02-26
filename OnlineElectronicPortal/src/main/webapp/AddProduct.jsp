@@ -18,7 +18,7 @@
 
     <a href="AddProduct.html">Add Products</a><br><br>
     <a href="View1">View Products</a><br><br>
-    <a href="Loout">Logout</a><br><br>
+    <a href="logout">Logout</a><br><br>
     
 </h1>
 </body>
