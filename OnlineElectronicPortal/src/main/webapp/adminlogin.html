@@ -1,40 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login</title>
+
 <style>
-body{
-display:flex;
-height:100%;
-width:100%;
-justify-content:center;
-align-content:center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#d1{
-display:flex;
-flex-direction:column;
-height:500px;
-width:500px;
-background-color: pink;
-color:black;
-justify-content:center;
-align-content:center;
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    padding:20px;
+}
+
+/* Glass Card */
+.glass-container{
+    width:100%;
+    max-width:400px;
+    padding:40px 30px;
+    border-radius:20px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border:1px solid rgba(255,255,255,0.3);
+    box-shadow:0 8px 32px rgba(0,0,0,0.25);
+    text-align:center;
+    color:white;
+}
+
+.glass-container h2{
+    margin-bottom:30px;
+    text-decoration: underline;
+}
+
+.input-group{
+    margin-bottom:20px;
+    text-align:left;
+}
+
+.input-group label{
+    font-size:14px;
+}
+
+.input-group input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+    background: rgba(255,255,255,0.25);
+    color:white;
+}
+
+.input-group input::placeholder{
+    color:#f1f1f1;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background: rgba(0,0,0,0.3);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+button:hover{
+    background: rgba(0,0,0,0.5);
+    transform: scale(1.03);
+}
+
+/* Responsive */
+@media(max-width:480px){
+    .glass-container{
+        padding:30px 20px;
+    }
 }
 </style>
 </head>
 <body>
-<center>
-<h1>
-<div id="d1">
-<u>Welcome to Admin Login</u><br><br>
-<form action="login" method="post">
-UserName: <input type="text" name="name"><br><br>
-Password: <input type="text" name="pwd"><br><br>
-<button name="submit" value="login">Login</button>
 
-</form>
+<div class="glass-container">
+    <h2>Welcome to Admin Login</h2>
+
+    <form action="login" method="post">
+        <div class="input-group">
+            <label>UserName:</label>
+            <input type="text" name="name" placeholder="Enter username">
+        </div>
+
+        <div class="input-group">
+            <label>Password:</label>
+            <input type="text" name="pwd" placeholder="Enter password">
+        </div>
+
+        <button name="submit" value="login">Login</button>
+    </form>
 </div>
-</h1>
+
 </body>
 </html>

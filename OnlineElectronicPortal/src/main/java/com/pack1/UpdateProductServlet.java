@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 public class UpdateProductServlet extends HttpServlet{
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse res)throws ServletException,IOException{
-		  HttpSession session = req.getSession();
+		  HttpSession session = req.getSession(false);
 		  if(session==null) {
 				throw new RuntimeException("Session expired!!!");
 			}
